@@ -1,5 +1,4 @@
 ### JS basic syntax:
-
 JS supports label to enable location jumping.
 ```
 label:
@@ -29,7 +28,7 @@ string([1,2,3]) //"1,2,3"
 ```
 Boolean(): only undefined, null, 0, -0, +0, NaN, ''(empty string) will convert to false, all other value will convert to true.
 
-auto-casting: system issued cast, invisible to user.
+Auto-casting: system issued cast, invisible to user.
 
 1. calculation of different types    // number + string will act like two string concatinate togather.
 2. asking for boolean value of a non-boolean variable //the auto-cast process is the same as Boolean()
