@@ -4,7 +4,7 @@ JS supports label to enable location jumping.
 label:
 	statement
 ```
-One of the usages of label is use with 'break' or 'continue' to break all the loops start from the label or jump to next iteration of the loop start from the label.
+One of the usages of label is to use with 'break' or 'continue' to break all the loops start from the label or jump to next iteration of the loop start from the label.
 
 JS is not restricted on variable type, variable(var) can be assigned with any value without type cast 
 JS does have primitive type(Boolean, Number, String, undefined, null).
@@ -17,7 +17,7 @@ Number(true) //1
 Number(undefined) //NaN
 Number(null) // 0
 ```
-Note: another way to get the number value of a string is use the function parseInt().
+Note: another way to get the number value of a string is using the function parseInt().
 
 ##### String(): this function can convert any value to string. it's basiclly the same as calling the function toString().
 ```
@@ -30,21 +30,21 @@ string([1,2,3]) //"1,2,3"
 
 ##### Auto-casting: system issued cast, invisible to user.
 
-1. calculation of different types    // number + string will act like two string concatinate togather.
-2. asking for boolean value of a non-boolean variable //the auto-cast process is the same as Boolean()
-3. use '+' or '-' on non-number var or object(like list)  //will produce Nan most likely
+1. Calculation of different types    // number + string will act like two string concatinate togather.
+2. Asking for boolean value of a non-boolean variable //the auto-cast process is the same as Boolean()
+3. Use '+' or '-' on non-number var or object(like list)  //It will produce Nan most likely
 
 
 
 
 #### Error handling:
-- Error() this function is used to create a new Error object.
+- Error(): this function is used to create a new Error object.
 ```
 var err = new Error("something is wrong")
 console.log(err.message) // something is wrong
 Error object must have three properties(message, name, stack).
 ```
-- customize error handling:
+- Customize error handling:
 ```
 function userError(message)
 {
