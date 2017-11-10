@@ -40,11 +40,10 @@ arguments is an object instead of list, to convert it to a list we will want to 
 Surround a function definition with parenthesis will call this function immediately after its been defined.
 Add parenthesis after the function definition to pass arguements.
 ```
-				(functionA(a, b){
-					var c;
-					c = a + b;
-					}(1,2));
-
+(functionA(a, b){
+	var c;
+	c = a + b;
+}(1,2));
 ```
 
 #### Closure:
