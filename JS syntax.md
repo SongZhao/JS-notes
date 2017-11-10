@@ -41,40 +41,32 @@ auto-casting: system issued cast, invisible to user.
 #### Error handling:
 Error() this function is used to create a new Error object.
 ```
-		var err = new Error("something is wrong")
-		console.log(err.message) // something is wrong
-		Error object must have three properties(message, name, stack).
+var err = new Error("something is wrong")
+console.log(err.message) // something is wrong
+Error object must have three properties(message, name, stack).
+```
+customize error handling:
+```
+function userError(message)
+{
+	this.message = message || "default message";
+	this.name = "errorName";
+}
+userError.prototype = new Error();
+userError.prototype.constructor = userError;
+userError.prototype.toString = function(){
+	return this.name + ': ' + this.message + '.'; 
+}
 
-		customize error handling:
-			function userError(message)
-			{
-				this.message = message || "default message";
-				this.name = "errorName";
-			}
-			userError.prototype = new Error();
-			userError.prototype.constructor = userError;
-			userError.prototype.toString = function(){
-				return this.name + ': ' + this.message + '.'; 
-			}
-
-			throw new userError("some error message");
-
-		assert()
-			funtion assert(expression, message){
-				if(!expression)
-					throw {name: "Assertion exception", message: message};
-			}
-<<<<<<< HEAD
-			we can also display assert in console by using console.assert(expression, 'message');
-
-
-
-
-
-	
-
-=======
+throw new userError("some error message");
+```
+assert():
+```
+funtion assert(expression, message){
+	if(!expression)
+		throw {name: "Assertion exception", message: message};
+}
 ```
 we can also display assert in console by using `console.assert(expression, 'message')`;
->>>>>>> origin/master
+
 
