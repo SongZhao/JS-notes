@@ -47,7 +47,7 @@ Add parenthesis after the function definition to pass arguements.
 ```
 
 #### Closure:
-closure is the bridge between global scope and function scope. It enables reading local variable from outer scope, it also keeps local variable in memory(will not be collect by garbage collecting).
+Closure is the bridge between global scope and function scope. Local variables have short lives. They are created when the function is invoked, and deleted when the function is finished. Closure enables reading local variable from outer scope, it also keeps local variable in memory(will not be collect by garbage collecting).
 closure can be used to read/write private variable.
 
 3 ways to avoid the reference problem in async function:
