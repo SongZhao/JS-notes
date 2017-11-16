@@ -1,0 +1,3 @@
+This paper foucs on how column storage can take advantage of parallelism at the bit level in modern processors and improve database performance on in scan operation.
+
+A column-scalar scan takes as input a list of n k-bit codes and a predicate iwth a basic comparison on a single column. The column scan finds all matching codes that satisfy the predicate, and output an n-bit vector called the result bit vactor indicating the matching codes.
