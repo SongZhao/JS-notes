@@ -2,18 +2,26 @@ python note Numpy
 
 
 
-
+```python
 array = np.array([1,2,3,4], dtype = np.float64)
 array1 = np.array([1,2,3,4], dtype = np.int32) 
-array2 = array1.astype(np.float64) #using as type will create a deep copy of the original array
+```
+using as type will create a deep copy of the original array
+```python
+array2 = array1.astype(np.float64)
+```
 
-array = np.arrange(5) #the array will be [0 1 2 3 4]
+
+`array = np.arrange(5)` the array will be [0 1 2 3 4]
 Another way to generate unit data array
-array = np.arrange(1,11,2, dtype=float64) #[  0.   2.   4.   6.   8.  10.]
-array = np.linspace(0,10,6) #[  0.   2.   4.   6.   8.  10.]
+`array = np.arrange(1,11,2, dtype=float64)` [  0.   2.   4.   6.   8.  10.]
+`array = np.linspace(0,10,6)` [  0.   2.   4.   6.   8.  10.]
 
-array = np.ones((3, )) will create a rank 1 array
-array = np.ones((3,1)) will create a rank 2 array, in most case we wanna create array like this
+```python
+array = np.ones((3, ))
+```
+will create a rank 1 array.
+`array = np.ones((3,1))` will create a rank 2 array, in most case we wanna create array like this
 so we can use operation like transpose.
 
 
