@@ -139,23 +139,25 @@ on the original matrix.
 
 
 #Calculation
+```python
 arr = np.arange(6).reshape(3,2) 
 print(arr) 
-
-[[0 1]  
- [2 3]  
- [4 5]]  
-
+'''
+[[0 1]  
+ [2 3]  
+ [4 5]] 
+'''
 print(arr.T) 
-
+'''
 [[0 2 4]  
  [1 3 5]]  
-
-print(np.dot(arr.T,arr))  
+'''
+print(np.dot(arr.T,arr)) 
+'''
 [[20 26]  
  [26 35]]
-
-
+'''
+```
 #broadcasting, operation that casts on each element individually
 arr1 = np.array([1,3,5,4,5]) 
 arr2 = np.array([4,6,1,3,4])  
