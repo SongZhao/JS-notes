@@ -207,18 +207,20 @@ print(arr.cumprod(axis=1))
 
 
 #bool array
+```python
 bools = np.array([False,False,True,False]) 
 print(bools.any())   #or
 print(bools.all())   #and
 
-True 
-False
-
+#True 
+#False
+```
 
 #Sorting
+```python
 arr.sort() #sort all elments
 arr.sort(axis = 1) #sorting horizontally
-
+```
 
 
 
