@@ -173,20 +173,20 @@ print(np.subtract(arr1,arr2))
 
 
 #np.where
-arr = np.random.randn(4,4) 
+```arr = np.random.randn(4,4)```
 #if element is larger than 0, assign it to 2, otherwise assign it to -2
-print(np.where(arr>0,2,-2)) 
+```print(np.where(arr>0,2,-2))``` 
 #if element is larger than 0, assign it to 2, otherwise stay the same.
-print(np.where(arr>0,2,arr))  
+```print(np.where(arr>0,2,arr))``` 
 
 
-arr = np.array([[0,1,2],[3,4,5],[6,7,8]]) 
+```arr = np.array([[0,1,2],[3,4,5],[6,7,8]])``` 
 #mean of the whole matrix
-print(arr.mean()) 
+```print(arr.mean())``` 
 #mean of each col
-print(arr.mean(axis=0))
+```print(arr.mean(axis=0))```
 #mean of each row 
-print(arr.mean(axis=1))
+```print(arr.mean(axis=1))```
 
 #same can apply to the sum(), std(), var(), min(), max(), argmin(), argmax() operation
 print((arr>0).sum())  #sum all elements that are larger than 0
