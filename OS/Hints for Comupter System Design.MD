@@ -106,5 +106,7 @@ The advantages of atomic actions for fault-tolerance:
 If a failure occurs during the action it has no effect, so that in recovering from a failure it is not necessary to deal with any of the intermediate states of the action.  
 A log entry usually needs to be restartable. Which means that it can be partially executed any number of times before a complete execution, without changing the result.
 
-
-
+  
+   
+     
+  [ref:Hints for computer system design](https://dl.acm.org/citation.cfm?doid=800217.806614)
