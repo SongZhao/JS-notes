@@ -29,6 +29,8 @@ Interface design must satisfy three things:
 
 - Leave it to the client
 	* If it is cheap to pass control of an interface back and forth, the interface should just quickly solve some problem and leave the rest to the client.
+	
+-----
 
 ### Continuity
 ##### Keep basic interfaces stable.  
@@ -56,6 +58,8 @@ A specialized implementaion of the idea may be much more effective than a genera
 ##### Handle normal and worst cases separately.
 the normal case must be fast, the worst case must make some progress. Must consider how to deal with the worest case.
 
+-----
+
 ### Speed
 ##### Split resources in a fixed way if in doublt, rather than sharing them.
 It is usually faster to allocate dedicated resources, but this increases cost.
@@ -82,7 +86,9 @@ Doing things incrementally. Disks and tapes work better when accessed sequential
 In allocating resources, strive to avoid disaster rather than to attain an optimum. Its easy enough ot overload a system and drastically degrade the service.
 
 ##### Shed load
-Do not let the system become overloaded, must take control. To shed load, an interactive system can refuse new users, or even deny service to existing ones; A memory manager can limit the jobs being served so that all their working sets fit in the available memory, etc..
+Do not let the system become overloaded, must take control. To shed load, an interactive system can refuse new users, or even deny service to existing ones; A memory manager can limit the jobs being served so that all their working sets fit in the available memory, etc..  
+
+-----
 
 ### Fault Tolerance
 ##### End-to-end
@@ -107,6 +113,6 @@ If a failure occurs during the action it has no effect, so that in recovering fr
 A log entry usually needs to be restartable. Which means that it can be partially executed any number of times before a complete execution, without changing the result.
 
   
-   
+  ------- 
      
-  [ref:Hints for computer system design](https://dl.acm.org/citation.cfm?doid=800217.806614)
+  [Ref: Hints for computer system design](https://dl.acm.org/citation.cfm?doid=800217.806614)
