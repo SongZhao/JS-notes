@@ -35,7 +35,21 @@ bar += ['bye']
 print(foo)
 # Output: ['hi', 'bye']
 ```
-
+This is also the reason we we dont want to define default arguments of mutable type.
+```python
+def add_to(num, target=[]):                   def add_to(element, target=None):     
+    target.append(num)                            if target is None:
+    return target                                     target = []
+                                                  target.append(element)
+add_to(1)                                         return target
+# Output: [1]                                 
+                                              add_to(1)                     
+add_to(2)                                     #Output: [1]
+# Output: [1,2]
+                                              add_to(1)
+add_to(3)                                     #Output: [2]
+# Output: [1,2,3]
+```
 
 
 
@@ -47,3 +61,11 @@ https://www.tutorialspoint.com/python/python_interview_questions.html
 https://www.edureka.co/blog/interview-questions/python-interview-questions/
 
 regex lib https://docs.python.org/2/library/re.html
+
+http://codingpy.com/article/essential-python-interview-questions/
+
+https://www.jianshu.com/p/92b56fa62c37
+
+https://zhuanlan.zhihu.com/p/23582996
+
+https://blog.csdn.net/yjk13703623757/article/details/79364637
