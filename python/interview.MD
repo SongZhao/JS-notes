@@ -51,7 +51,27 @@ add_to(3)                                     #Output: [2]
 # Output: [1,2,3]
 ```
 
+13. If you pass immutable arguments like integers, strings or tuples to a function, the passing acts like call by value. The object reference is passed to the function parameters. They can't be changed within the function, because they can't be changed at all. A mutable object exhibits time-varying behavior. Changes to a mutable object are visible through all names bound to it. The value of immutable objects can not be modified after they are created. However immutable object can contain mutable object which can be changed(ie. list in a tuple).
 
+14. immutable: strings, tuples, numbers. Mutable: list, dict.  
+
+15. 
+* list: can contain elements of different types and repeatable.
+* tuple: like a list but immutable.
+* dict: list of key-value pair.
+* set: elements in set are not repeatable.
+
+16. range returns a list, xrange returns a generator. In python 3, range is implemented using xrange.
+
+17. difference between python 2 and 3:
+* print function, python 3 need ().
+* divide operator, in python 3 **/** will no longer cut the decimal part off. If you want to cut the decimal part you should use **//**.
+* Unicode: in python 2, unicode and str type can be concatinated together and the new type is bytearray. In python 3, we can not add str type to byte/bytearray type.
+* range in python 3 has a new ``__contain__`` magic method implemented.
+* Python2 exception: ```except NameError, err```. Python3 exception: ```except NameError as err```
+* Python3 no longer u cant use ```generator.next()```, funtion ```next(generator)``` is the way to do it.
+* input() in Python3 only returns type str.
+* In Python3 if we want to return a list instead of a generator, we can use list(generator) to get the list.
 
 
 https://www.interviewcake.com/python-interview-questions
