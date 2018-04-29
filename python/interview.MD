@@ -61,7 +61,7 @@ add_to(3)                                     #Output: [2]
 * dict: list of key-value pair.
 * set: elements in set are not repeatable.
 
-16. range returns a list, xrange returns a generator. In python 3, range is implemented using xrange.
+16. range returns a list, xrange returns an iterable object,. In python 3, range is implemented using xrange.
 
 17. difference between python 2 and 3:
 * print function, python 3 need ().
@@ -69,9 +69,66 @@ add_to(3)                                     #Output: [2]
 * Unicode: in python 2, unicode and str type can be concatinated together and the new type is bytearray. In python 3, we can not add str type to byte/bytearray type.
 * range in python 3 has a new ``__contain__`` magic method implemented.
 * Python2 exception: ```except NameError, err```. Python3 exception: ```except NameError as err```
-* Python3 no longer u cant use ```generator.next()```, funtion ```next(generator)``` is the way to do it.
+* Python3 no longer u cant use ``` iterableObject,.next()```, funtion ```next(iterableObject)``` is the way to do it.
 * input() in Python3 only returns type str.
-* In Python3 if we want to return a list instead of a generator, we can use list(generator) to get the list.
+* In Python3 if we want to return a list instead of an iterable object, we can use list(iterable object) to get the list.
+
+
+18. What is generator? Why do we want to use generator? Q: use on demand.
+
+19. Why function is first class object? Describe some use of it. 
+Q: properties of first class function is:
+* a function is an instance of the Object type
+* you can store the function in a variable
+* you can pass the function as a parameter to another function
+* you can return the function from a function
+* you can store them in data structures such as hash tables, lists
+
+
+Functions are objects, therefore function can be assigned to a variable, can be defined in another function.
+
+20. Describe memory management in python.
+
+21. Describe GC in python, if there is an object with non-zero reference, should you do GC?
+Q: We might want to GC that if two instance is pointed to each other, thus formed a deadlock.
+
+22. What is closure?
+Q:A closure is a function object that remembers calues in enclosing scopes even if they are not present in memory. A closure allows the function to access those captured variables through the closure's copies of their values or references, even when the function is invoked outside their scope.
+```python
+import logging
+logging.basicConfig(filename='example.log', level=logging.INFO)
+def logger(func):
+    def log_func(*args):
+        logging.info(
+            'Running "{}" with arguments {}'.format(func.__name__, args))
+        print(func(*args))
+    # Necessary for closure to work (returning WITHOUT parenthesis)
+    return log_func              
+ 
+def add(x, y):
+    return x+y
+ 
+def sub(x, y):
+    return x-y
+ 
+add_logger = logger(add)
+sub_logger = logger(sub)
+add_logger(3, 3)
+sub_logger(20, 10)
+#6
+#5
+```
+23. When and why to use closures?  
+Q: As closures are used as callback functions, they provide some sort of data hiding. This helps us to reduce the use of global variables. When we have few functions in our code, closures prove to be efficient way. But if we need to have many functions, then go for class(OOP).
+
+
+24. remove repeat elements in list
+Q:
+ * 1. `list(set(l))`
+   2. `l = {}.fromkeys(l1).keys()`
+   3. `l2 = list(set(l1))` `l2.sort(key=l1.index)` keep the order in the original list.
+   4. `l2.append(i) for i in l1 if not i in l2` sort the order then insert.
+
 
 
 https://www.interviewcake.com/python-interview-questions
