@@ -87,8 +87,11 @@ Q: properties of first class function is:
 
 Functions are objects, therefore function can be assigned to a variable, can be defined in another function.
 
-20. Describe memory management in python.
-
+20. Describe memory management in python.  
+Q: 
+* Python memory is managed by Python private heap space. All Python objects and data structures are located in a private heap. The programmer does not have an access to this private heap and interpreter takes care of this Python private heap. 
+* The allocation of Python heap space for Python objects is done by Python memory manager. The core API gives access to some tools for the programmer to code.
+* Python also have an inbuilt garbage collector, which recycle all the unused memory and frees the memory and makes it available to the heap space.
 21. Describe GC in python, if there is an object with non-zero reference, should you do GC?
 Q: We might want to GC that if two instance is pointed to each other, thus formed a deadlock.
 
@@ -129,8 +132,38 @@ Q:
    3. `l2 = list(set(l1))` `l2.sort(key=l1.index)` keep the order in the original list.
    4. `l2.append(i) for i in l1 if not i in l2` sort the order then insert.
 
+25. list comprehension
+Q: list comprehension provide a concise way to create list. a list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if clause which follow it.
 
+26.  
+```python
+list = [ [ ] ] * 5
+list 
+list[0].append(10)
+list 
+list[1].append(20)
+list
+list.append(30)
+list 
+# [[], [], [], [], []]
+# [[10], [10], [10], [10], [10]]
+# [[10, 20], [10, 20], [10, 20], [10, 20], [10, 20], 30]
+```
+Keep in mind in python everything is an object.
 
+27. Deep copy and shallow copy  
+Shallow copy is used when a new instance type gets created and it leeps the values that are copied in the new instance. Shallow copy is used to copy the reference pointers just like it copies the values. These references point to the original objects and the changes made in any member of the class will also affect the original copy of it. Shallow copy allows faster execution of the program and it depends on the size of the data that is used.  
+Deep copy is used to store the calues that are already copied, deep copy doesn't copy the reference pointers to the objects. It makes the refrence to an object and the new object that is pointed by some other object gets stored. The changes made in the original copy won't affect any other copy that uses the object. Deep copy makes execution of the program slower due to making certain copies for each object that is been called.
+
+The difference between shallow and deep copying is only relevant for compound objects(objects that contain other objects, like list or class instances) 
+* a shallow copy constructs a new compund object and then inserts regerences into it to the objects found in the original.
+* a deep copy constructs a new compund object and then, recursively, inserts copies into it of the objects found in the original.
+Two problems often exist with deep copy operations that don’t exist with shallow copy operations:  
+* Recursive objects (compound objects that, directly or indirectly, contain a reference to themselves) may cause a recursive loop.
+* Because deep copy copies everything it may copy too much, such as data which is intended to be shared between copies.
+
+28. What is monkey patching in Python?  
+Q: In Python, the term monkey patch only refers to dynamic modifications of a class or module at run-time.
 https://www.interviewcake.com/python-interview-questions
 
 https://www.tutorialspoint.com/python/python_interview_questions.html
