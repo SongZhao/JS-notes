@@ -44,4 +44,4 @@ https://docs.python.org/3/reference/datamodel.html#special-method-names
 
 
 
-[table]: https://drive.google.com/file/d/17hXDVJH90KtBPnxf17wZcsR0sBm5Sc03/view?usp=sharing "magic function table
+[table]: http://ww1.sinaimg.cn/large/e5da91aaly1fquneof72zj20p20h0dh2.jpg "magic function table"
