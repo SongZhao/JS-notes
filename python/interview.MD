@@ -56,10 +56,10 @@ add_to(3)                                     #Output: [2]
 14. immutable: strings, tuples, numbers. Mutable: list, dict.  
 
 15. 
-* list: can contain elements of different types and repeatable.
-* tuple: like a list but immutable.
-* dict: list of key-value pair.
-* set: elements in set are not repeatable.
+* list: can contain elements of different types and repeatable. []
+* tuple: like a list but immutable.()
+* dict: list of key-value pair. {}
+* set: elements in set are not repeatable. ([])
 
 16. range returns a list, xrange returns an iterable object,. In python 3, range is implemented using xrange.
 
@@ -74,7 +74,8 @@ add_to(3)                                     #Output: [2]
 * In Python3 if we want to return a list instead of an iterable object, we can use list(iterable object) to get the list.
 
 
-18. What is generator? Why do we want to use generator? Q: use on demand.
+18. What is generator? Why do we want to use generator?  
+Q: Generator doesnt hold the entire result in memory, it yields one result at a time. Use on demand, better on performance.
 
 19. Why function is first class object? Describe some use of it. 
 Q: properties of first class function is:
@@ -134,6 +135,7 @@ Q:
 
 25. list comprehension
 Q: list comprehension provide a concise way to create list. a list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if clause which follow it.
+`my_dict = {name: hero for name, hero in zip (names, heros) if name != 'peter'}  #create a dict from zip(names, heros) and eject the key named peter`
 
 26.  
 ```python
