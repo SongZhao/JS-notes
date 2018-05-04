@@ -4,11 +4,11 @@
 
 3. **del** is used to delte a reference to an object, any variable or list value can be deleted using del.  
 
-4. **//** is called truncating division where the remainder is truncated or dropped.
+4. **//** is called truncating division or floor division where the remainder is truncated or dropped.
 
 5. **filter** creates a list of elements for which a function returns true. filter(function_name, para_for_the_function).  
 
-6. **Map** applies a function to all the items in an input_list. map(function_to_apply, list_of_inputs).  
+6. **Map** applies a function to all the items in an input_list. map(function_to_apply, list_of_inputs).   
 
 7. **Reduce** performs computation on a list and returning the result. It applies a rolling computation to sequential pairs of values in a list.  
 ```python
@@ -165,7 +165,61 @@ Two problems often exist with deep copy operations that don’t exist with shall
 * Because deep copy copies everything it may copy too much, such as data which is intended to be shared between copies.
 
 28. What is monkey patching in Python?  
-Q: In Python, the term monkey patch only refers to dynamic modifications of a class or module at run-time.
+A: In Python, the term monkey patch only refers to dynamic modifications of a class or module at run-time.  
+
+29. Explain Inheritance in Python with an example.  
+A: Inheritance allows one class to gain all the members(attributes and methods) of another class. Inheritance provides code reusability, makes it easier to create and maintain an application. The class from which we are inheriting is called super-class and the class that is inherited is called a derived/child class.
+* Single Inheritance- where a derived class acquires the members of a single super class. 
+* Multi-level inheritance - a derived class d1 in inherited from base class base1 and d2 inherited from base2.
+* Hierarchical inheritance - from one base class you can inherit any number of child classes
+* Multiple inheritance - a derived class is inherited from more than one base class.
+
+30. Multithreading in Python
+A: python has a multi-threading package. Python has a construct called the Flobal Interpreter Lock that makes sure that only one of your threads can execute at any one time. A thread acquires the GIL, does a little work, then passes the GIL onto the next thread. However, all this GIL passing adds overhead to execution, the threading package in Python is not a good idea if you want to make your code faster.
+
+31. What is the usage of help() and dir() function in Python?
+Help() is used to display the documentation string and also facilitates you to see the help related to modules, keywords, attributes.  
+dir() is used to display the defined symbols.  
+
+32. Why Python isn't de-allocate all the memory when it exits?  
+A: Whenever python exits, expecally those python mnodules which are having circular references to other objects or the objects that are referenced from the global namespaces are not always de-allocated or freed. It is also impossible to de-allocate those portions of memory that are reserved by the C library.  
+
+33. What is dictionary in Python?  
+A: Dict is a build in datatype in python. It defines one-to-one relationship between leys and values. Dictionaries contain pair of keys and their corresponding values.
+Some dict operations
+
+| Operation | complexity | usage|
+|-----------| ------| ----------|
+|len(d) | O(1) | return size|
+| del d[k]| O(1) | delete kth element|
+| d.get(k)| O(1)| get kth element |
+|d.Pop(k) | 1 | pop kth element|
+| d.clear() | 1 | d = {} |
+|d.keys() | 1 | same as d.values()|
+|dict.fromkeys(list)| | return a unique element list that maintain original order |
+
+34. What is the `with` key word in python?
+A: In Python the `with` keyword is used when working with unmanaged resources(like file streams) or if you have two related operations which you'd like to execute as a pair. The advantage of using a `with` statement is that it is guaranteed to close the file no matter how the nested block exits. It allows you to ensure that a resource is cleaned up when the code that uses it finishes running, even if exceptions are thrown.
+
+35. What is the process of compilation and linking in python?
+A: The compiling and linking allows the new extensions to be compiled properly without any error and the linking can be done only when it passes the compiled procedure. If the dynamic loading is used then it depends on the style that is being provided with the system. The python interpreter can be used to provide the dynamic loading of the configuration setup files and will rebuild the interpreter.     
+Steps:  
+1. Create a file with any name and in any language that is supported by the compiler of your system. (i.e. file.c)
+2. Place this file in the Modules/directory of the distribution which is getting used.
+3. Add a line in the file setup.local that is present in the Modules/directory.
+4. Run the file using spam file.o
+5. After successful run of this rebuild the interpreter by using the make command on the top-level directory.
+6. if the file is changed then run rebuildMakefile by using the command as `make Makefile`.
+
+
+36. Explain split(), sub(), subn() methods of 're' module in Python
+A: 
+* split() - uses a regex pattern to split a given string into a list.
+* sub() - finds all substring where the regex pattern matches and then replace them with a different string
+* subn() - it is similar to sub() and also returns the new string along with the number of replacements.
+
+1000. Some Numpy usage (merge this to the numpy file later)
+A: Numpy is more efficient/faster, python list doesnt support vectorized operations.
 https://www.interviewcake.com/python-interview-questions
 
 https://www.tutorialspoint.com/python/python_interview_questions.html
