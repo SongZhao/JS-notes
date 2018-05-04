@@ -1,6 +1,12 @@
 isintance(instance, class)
 issubclass(subclass, class)
 
+-----
+
+We can use dir() to check properties/fields of an object/class (i.e. dir(list))
+
+-----
+
 Decorator is a function takes another function as arguement, adds some kind of functionality and returns another function without altering the original source code of function you passing in.  By adding functionality in wrapper function, we can alter the functionality of orig_functoin
 ```python
 def decorator_function(orig_function)
